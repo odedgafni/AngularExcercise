@@ -1,0 +1,16 @@
+mat-form-field, button {
+    display: inline-block;
+    padding: 5px;
+}
+
+mat-error {
+    margin-top: 10px;
+}
+
+form {
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+}

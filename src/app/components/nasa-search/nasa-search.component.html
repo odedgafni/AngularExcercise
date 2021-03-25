@@ -1,0 +1,18 @@
+<form>
+    <mat-form-field>
+        <label for="from">From</label>
+        <input matInput [matDatepicker]="from" [max]="maxDate" name="fromDate" (dateChange)="adjustDateEnd()"
+            [(ngModel)]="fromDate">
+        <mat-datepicker-toggle [for]="from" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #from></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <label for="to">To</label>
+        <input matInput [matDatepicker]="to" [min]="fromDate" [max]="maxDateEnd" name="toDate" [(ngModel)]="toDate">
+        <mat-datepicker-toggle [for]="to" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #to></mat-datepicker>
+        <mat-hint>Dates selected must be in 7 days range</mat-hint>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Search Asteroids</button>
+    <mat-error *ngIf="!validDate">Invalid details</mat-error>
+</form>

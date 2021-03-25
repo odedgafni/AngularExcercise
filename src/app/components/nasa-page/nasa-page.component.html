@@ -1,0 +1,3 @@
+<h1>Asteroid Info Center</h1>
+<app-nasa-search [getAsteroids]="getAsteroids"></app-nasa-search>
+<img *ngIf="nasaService.isLoading | async" src="https://media.giphy.com/media/3oEjHBO7mXcPBDQV8Y/giphy.gif">
